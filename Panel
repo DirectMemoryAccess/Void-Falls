@@ -33,6 +33,8 @@ UI.BorderColor3 = Color3.fromRGB(0, 0, 0)
 UI.BorderSizePixel = 0
 UI.Position = UDim2.new(0.373724282, 0, 0.308678746, 0)
 UI.Size = UDim2.new(0, 427, 0, 231)
+UI.Active = true
+UI.Draggable = true
 
 UIStroke.Color = Color3.fromRGB(32, 91, 150)
 UIStroke.Thickness = 1.5
