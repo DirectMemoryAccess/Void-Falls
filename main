@@ -1,1 +1,1004 @@
+--- White List System
 
+local allowedUserIds = {
+	DirectMemoryAccess = 6156907237,
+	XazmyBalenci = 3929630725,
+	Caliber = 5671099212
+}
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local isWhitelisted = false
+for _, userId in pairs(allowedUserIds) do
+	if LocalPlayer.UserId == userId then
+		isWhitelisted = true
+		break
+	end
+end
+
+if not isWhitelisted then
+	LocalPlayer:Kick("Trying to bypass our System. You are not listed.")
+	return
+end
+
+--- Aimviewer System
+
+local starterGui = game:GetService("StarterGui")
+
+local function showNotification()
+	starterGui:SetCore("SendNotification", {
+		Title = "Falling Void",
+		Text = "Go to settings to configure the Aim Viewer.",
+		Duration = 5,
+		Button1 = "Got It"
+	})
+end
+
+local function toggleAimViewer()
+	showNotification()
+
+	while true do
+
+		local player = game:GetService("Players").LocalPlayer
+		local gui = player.PlayerGui.gui
+		local aimViewerFrame = gui.Settings.ScrollingFrame.aimviewer
+
+		aimViewerFrame.Visible = true
+
+		task.wait(3)
+	end
+end
+
+toggleAimViewer()
+
+local FallingVoid = Instance.new("ScreenGui")
+local UI = Instance.new("Frame")
+local UIStroke = Instance.new("UIStroke")
+local Holder = Instance.new("Frame")
+local UIStroke_2 = Instance.new("UIStroke")
+local Holder_2 = Instance.new("Frame")
+local UIStroke_3 = Instance.new("UIStroke")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local Line = Instance.new("Frame")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton_4 = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local Holder2 = Instance.new("Frame")
+local UIStroke_4 = Instance.new("UIStroke")
+local Spectate = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local Visuals = Instance.new("TextButton")
+local Line_2 = Instance.new("Frame")
+local GoTo = Instance.new("TextButton")
+local Vanish = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+
+FallingVoid.Name = "Falling Void"
+FallingVoid.Parent = game.CoreGui
+
+UI.Name = "UI"
+UI.Parent = FallingVoid
+UI.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+UI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UI.BorderSizePixel = 0
+UI.Position = UDim2.new(0.666876912, 0, 0.119333073, 0)
+UI.Size = UDim2.new(0, 427, 0, 231)
+
+UIStroke.Color = Color3.fromRGB(32, 91, 150)
+UIStroke.Thickness = 1.5
+UIStroke.Parent = UI
+
+Holder.Name = "Holder"
+Holder.Parent = UI
+Holder.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Holder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Holder.BorderSizePixel = 0
+Holder.Position = UDim2.new(0.0200944319, 0, 0.118202373, 0)
+Holder.Size = UDim2.new(0, 409, 0, 195)
+
+UIStroke_2.Color = Color3.fromRGB(40, 40, 40)
+UIStroke_2.Parent = Holder
+
+Holder_2.Name = "Holder"
+Holder_2.Parent = Holder
+Holder_2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Holder_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Holder_2.BorderSizePixel = 0
+Holder_2.Position = UDim2.new(0.0152044697, 0, 0.0310229175, 0)
+Holder_2.Size = UDim2.new(0, 313, 0, 182)
+
+UIStroke_3.Color = Color3.fromRGB(40, 40, 40)
+UIStroke_3.Parent = Holder_2
+
+TextButton.Parent = Holder_2
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, 0.186813191, 0)
+TextButton.Size = UDim2.new(0, 313, 0, 18)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "Remove BloxDog : OFF"
+TextButton.TextColor3 = Color3.fromRGB(255, 0, 4)
+TextButton.TextSize = 14.000
+
+TextLabel.Parent = Holder_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 313, 0, 18)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "Ingame"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+Line.Name = "Line"
+Line.Parent = Holder_2
+Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Line.BorderSizePixel = 0
+Line.Position = UDim2.new(0.395787448, 0, 0.135418728, 0)
+Line.Size = UDim2.new(0, 64, 0, 1)
+
+TextButton_2.Parent = Holder_2
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.BackgroundTransparency = 1.000
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0, 0, 0.285714298, 0)
+TextButton_2.Size = UDim2.new(0, 313, 0, 18)
+TextButton_2.Font = Enum.Font.FredokaOne
+TextButton_2.Text = "Anti Staff : OFF"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 0, 4)
+TextButton_2.TextSize = 14.000
+
+TextButton_3.Parent = Holder_2
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.BackgroundTransparency = 1.000
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0, 0, 0.384615391, 0)
+TextButton_3.Size = UDim2.new(0, 313, 0, 18)
+TextButton_3.Font = Enum.Font.FredokaOne
+TextButton_3.Text = "FV Lock : OFF"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 0, 4)
+TextButton_3.TextSize = 14.000
+
+TextLabel_2.Parent = Holder_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0, 0, 0.505494535, 0)
+TextLabel_2.Size = UDim2.new(0, 313, 0, 9)
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = "Press Q to Lock onto Players"
+TextLabel_2.TextColor3 = Color3.fromRGB(111, 111, 111)
+TextLabel_2.TextSize = 14.000
+
+TextButton_4.Parent = Holder_2
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.BackgroundTransparency = 1.000
+TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(-0.00319488812, 0, 0.582417607, 0)
+TextButton_4.Size = UDim2.new(0, 313, 0, 18)
+TextButton_4.Font = Enum.Font.FredokaOne
+TextButton_4.Text = "Anti Lock : OFF"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 0, 4)
+TextButton_4.TextSize = 14.000
+
+TextLabel_3.Parent = Holder_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(-0.00319488812, 0, 0.708791018, 0)
+TextLabel_3.Size = UDim2.new(0, 313, 0, 9)
+TextLabel_3.Font = Enum.Font.FredokaOne
+TextLabel_3.Text = "Press R to Anti Lock"
+TextLabel_3.TextColor3 = Color3.fromRGB(111, 111, 111)
+TextLabel_3.TextSize = 14.000
+
+Holder2.Name = "Holder2"
+Holder2.Parent = Holder
+Holder2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Holder2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Holder2.BorderSizePixel = 0
+Holder2.Position = UDim2.new(0.80004555, 0, 0.0310229175, 0)
+Holder2.Size = UDim2.new(0, 75, 0, 182)
+
+UIStroke_4.Color = Color3.fromRGB(40, 40, 40)
+UIStroke_4.Parent = Holder2
+
+Spectate.Name = "Spectate"
+Spectate.Parent = Holder2
+Spectate.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Spectate.BackgroundTransparency = 1.000
+Spectate.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Spectate.BorderSizePixel = 0
+Spectate.Size = UDim2.new(0, 75, 0, 18)
+Spectate.Font = Enum.Font.FredokaOne
+Spectate.Text = "Spectate"
+Spectate.TextColor3 = Color3.fromRGB(255, 0, 0)
+Spectate.TextSize = 14.000
+
+TextBox.Parent = Holder2
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0666666701, 0, 0.148351654, 0)
+TextBox.Size = UDim2.new(0, 64, 0, 11)
+TextBox.Font = Enum.Font.FredokaOne
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.PlaceholderText = "Player Here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+Visuals.Name = "Visuals"
+Visuals.Parent = Holder2
+Visuals.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Visuals.BackgroundTransparency = 1.000
+Visuals.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Visuals.BorderSizePixel = 0
+Visuals.Position = UDim2.new(0, 0, 0.285714298, 0)
+Visuals.Size = UDim2.new(0, 75, 0, 18)
+Visuals.Font = Enum.Font.FredokaOne
+Visuals.Text = "Visuals"
+Visuals.TextColor3 = Color3.fromRGB(255, 0, 0)
+Visuals.TextSize = 14.000
+
+Line_2.Name = "Line"
+Line_2.Parent = Holder2
+Line_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Line_2.BorderSizePixel = 0
+Line_2.Position = UDim2.new(0.0667138696, 0, 0.245308846, 0)
+Line_2.Size = UDim2.new(0, 64, 0, 1)
+
+GoTo.Name = "GoTo"
+GoTo.Parent = Holder2
+GoTo.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+GoTo.BackgroundTransparency = 1.000
+GoTo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GoTo.BorderSizePixel = 0
+GoTo.Position = UDim2.new(0, 0, 0.384615391, 0)
+GoTo.Size = UDim2.new(0, 75, 0, 18)
+GoTo.Font = Enum.Font.FredokaOne
+GoTo.Text = "Go To"
+GoTo.TextColor3 = Color3.fromRGB(255, 0, 0)
+GoTo.TextSize = 14.000
+
+Vanish.Name = "Vanish"
+Vanish.Parent = Holder2
+Vanish.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Vanish.BackgroundTransparency = 1.000
+Vanish.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Vanish.BorderSizePixel = 0
+Vanish.Position = UDim2.new(0, 0, 0.483516484, 0)
+Vanish.Size = UDim2.new(0, 75, 0, 18)
+Vanish.Font = Enum.Font.FredokaOne
+Vanish.Text = "Vanish"
+Vanish.TextColor3 = Color3.fromRGB(255, 0, 0)
+Vanish.TextSize = 14.000
+
+ImageLabel.Parent = UI
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(-1.4293947e-07, 0, 0, 0)
+ImageLabel.Size = UDim2.new(0, 40, 0, 27)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=138319380714001"
+
+TextLabel_4.Parent = UI
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.077283375, 0, 0.0259740259, 0)
+TextLabel_4.Size = UDim2.new(0, 75, 0, 15)
+TextLabel_4.Font = Enum.Font.FredokaOne
+TextLabel_4.Text = "Falling Void"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+local function KTLT_fake_script()
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	local isEnabled = false
+	
+	local function removeBloxDog()
+		local character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+		local healthScript = character:FindFirstChild("Health")
+	
+		if healthScript and healthScript:IsA("Script") then
+			local bloxDog = healthScript:FindFirstChild("BloxDog")
+			if bloxDog and bloxDog:IsA("Script") then
+				bloxDog:Destroy()
+			end
+		end
+	end
+	
+	local function toggleScript()
+		isEnabled = not isEnabled
+	
+		if isEnabled then
+			removeBloxDog()
+			button.BackgroundColor3 = Color3.fromRGB(0, 1, 0)
+			button.Text = "Remove BloxDog: ON"
+			button.TextColor3 = Color3.fromRGB(0, 255, 0)
+		else
+			button.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+			button.Text = "Remove BloxDog: OFF"
+			button.TextColor3 = Color3.fromRGB(255, 0, 4)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		toggleScript()
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(removeBloxDog)
+	if LocalPlayer.Character then
+		removeBloxDog()
+	end
+end
+coroutine.wrap(KTLT_fake_script)()
+local function HYXHD_fake_script()
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	local button = script.Parent
+	local toggleState = false
+	local groupId = 33986332
+	local notifiedPlayers = {}
+	local playerAddedConnection
+	local playerRemovingConnection
+	
+	button.Text = "Anti Staff : OFF"
+	button.TextColor3 = Color3.new(1, 0, 0)
+	
+	local function activateAntiStaff()
+		playerAddedConnection = game.Players.PlayerAdded:Connect(function(player)
+			if player:IsInGroup(groupId) and not notifiedPlayers[player.UserId] then
+				notifiedPlayers[player.UserId] = true
+				wait(0.2)
+				game.StarterGui:SetCore("SendNotification", {
+					Title = "VF - Staff Team",
+					Text = player.Name .. " has joined!",
+					Icon = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. player.UserId .. "&width=150&height=150&format=png",
+					Duration = 10
+				})
+			end
+		end)
+	
+		playerRemovingConnection = game.Players.PlayerRemoving:Connect(function(player)
+			if notifiedPlayers[player.UserId] then
+				game.StarterGui:SetCore("SendNotification", {
+					Title = "VF - Staff Team",
+					Text = player.Name .. " has left!",
+					Duration = 10
+				})
+				notifiedPlayers[player.UserId] = nil
+			end
+		end)
+	end
+	
+	local function deactivateAntiStaff()
+		if playerAddedConnection then
+			playerAddedConnection:Disconnect()
+			playerAddedConnection = nil
+		end
+		if playerRemovingConnection then
+			playerRemovingConnection:Disconnect()
+			playerRemovingConnection = nil
+		end
+	end
+	
+	local function toggle()
+		toggleState = not toggleState
+	
+		if toggleState then
+			activateAntiStaff()
+			button.Text = "Anti Staff : ON"
+			button.TextColor3 = Color3.new(0, 1, 0)
+		else
+			deactivateAntiStaff()
+			button.Text = "Anti Staff : OFF"
+			button.TextColor3 = Color3.new(1, 0, 0)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggle)
+end
+coroutine.wrap(HYXHD_fake_script)()
+local function WLBKT_fake_script()
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	local button = script.Parent
+	local toggleState = false
+	
+	button.Text = "FV Lock : OFF"
+	button.TextColor3 = Color3.new(1, 0, 0)
+	
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local LocalPlayer = Players.LocalPlayer
+	local camera = workspace.CurrentCamera
+	
+	local enemy = nil
+	local isTracking = false
+	local Prediction = 0.13
+	local JumpOffset = 0.04
+	local targetParts = {}
+	local currentPartIndex = 1
+	local cycleTime = 0.2
+	local lastSwitch = tick()
+	
+	local function isWalkingStraight(enemy)
+		local velocity = enemy.HumanoidRootPart.Velocity
+		return math.abs(velocity.X) > 1 or math.abs(velocity.Z) > 1
+	end
+	
+	local function updateTargetParts(character)
+		targetParts = {}
+		for _, part in ipairs(character:GetChildren()) do
+			if part:IsA("BasePart") then
+				table.insert(targetParts, part)
+			end
+		end
+	end
+	
+	local function switchTargetPart()
+		if tick() - lastSwitch > cycleTime and #targetParts > 0 then
+			lastSwitch = tick()
+			currentPartIndex = (currentPartIndex % #targetParts) + 1
+		end
+	end
+	
+	local function findNearestEnemy()
+		local closestEnemy = nil
+		local minDistance = math.huge
+		local screenCenter = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 2)
+	
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				local character = player.Character
+				local health = character:FindFirstChild("Humanoid").Health
+	
+				if health > 0 then
+					local partPosition, onScreen = camera:WorldToViewportPoint(character.HumanoidRootPart.Position)
+					if onScreen then
+						local distance = (screenCenter - Vector2.new(partPosition.X, partPosition.Y)).Magnitude
+						if distance < minDistance then
+							minDistance = distance
+							closestEnemy = character
+						end
+					end
+				end
+			end
+		end
+	
+		if closestEnemy then
+			updateTargetParts(closestEnemy)
+		end
+	
+		return closestEnemy
+	end
+	
+	local function toggleTracking()
+		isTracking = not isTracking
+		if isTracking then
+			enemy = findNearestEnemy()
+			if enemy then
+				enemy.Humanoid.Died:Connect(function()
+					enemy = nil
+					enemy = findNearestEnemy()
+				end)
+			end
+		else
+			enemy = nil
+		end
+	end
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end
+		if input.KeyCode == Enum.KeyCode.Q then
+			if toggleState then
+				toggleTracking()
+			end
+		end
+	end)
+	
+	LocalPlayer.CharacterAdded:Connect(function()
+		if isTracking then
+			enemy = findNearestEnemy()
+		end
+	end)
+	
+	RunService.Heartbeat:Connect(function()
+		if not isTracking or not enemy or #targetParts == 0 then return end
+	
+		switchTargetPart()
+		local part = targetParts[currentPartIndex]
+		if part then
+			local partPosition = part.Position
+	
+			if isWalkingStraight(enemy) then
+				local velocity = enemy.HumanoidRootPart.Velocity
+				local predictedPosition = partPosition + velocity * Prediction
+				camera.CFrame = CFrame.new(camera.CFrame.Position, predictedPosition + Vector3.new(0, JumpOffset, 0))
+			else
+				camera.CFrame = CFrame.new(camera.CFrame.Position, partPosition + Vector3.new(0, JumpOffset, 0))
+			end
+		end
+	end)
+	
+	local function toggleButton()
+		toggleState = not toggleState
+	
+		if toggleState then
+			button.Text = "FV Lock : ON"
+			button.TextColor3 = Color3.new(0, 1, 0)
+		else
+			button.Text = "FV Lock : OFF"
+			button.TextColor3 = Color3.new(1, 0, 0)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleButton)
+	
+end
+coroutine.wrap(WLBKT_fake_script)()
+local function GAZXDP_fake_script()
+	local script = Instance.new('LocalScript', TextButton_4)
+
+	local button = script.Parent
+	local toggleState = false
+	local Toggled = false
+	local KeyCode = 'R'
+	
+	button.Text = "Anti Lock : OFF"
+	button.TextColor3 = Color3.new(1, 0, 0)
+	
+	local function AA()
+		local oldVelocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, -70, oldVelocity.Z)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, oldVelocity.Y, oldVelocity.Z)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, -70, oldVelocity.Z)
+		game.Players.LocalPlayer.Character.Humanoid.HipHeight = 4.14
+	end
+	
+	game:GetService('UserInputService').InputBegan:Connect(function(Key)
+		if Key.KeyCode == Enum.KeyCode[KeyCode:upper()] and not game:GetService('UserInputService'):GetFocusedTextBox() then
+			if toggleState then
+				if Toggled then
+					Toggled = false
+					game.Players.LocalPlayer.Character.Humanoid.HipHeight = 1.85
+				end
+			end
+		end
+	end)
+	
+	local function toggle()
+		toggleState = not toggleState
+	
+		if toggleState then
+			button.Text = "Anti Lock : ON"
+			button.TextColor3 = Color3.new(0, 1, 0)
+			Toggled = true
+			while Toggled do
+				AA()
+				task.wait()
+			end
+		else
+			button.Text = "Anti Lock : OFF"
+			button.TextColor3 = Color3.new(1, 0, 0)
+			Toggled = false
+			game.Players.LocalPlayer.Character.Humanoid.HipHeight = 1.85
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggle)
+end
+coroutine.wrap(GAZXDP_fake_script)()
+local function PRLOC_fake_script()
+	local script = Instance.new('LocalScript', Spectate)
+
+	local textBox = script.Parent.Parent:WaitForChild("TextBox")
+	local spectateButton = script.Parent.Parent:WaitForChild("Spectate")
+	
+	local isSpectating = false
+	local spectateEnabledColor = Color3.fromRGB(0, 255, 0)
+	local spectateDisabledColor = Color3.fromRGB(255, 0, 0)
+	
+	local player = game.Players.LocalPlayer
+	local camera = game.Workspace.CurrentCamera
+	
+	local targetPlayer
+	
+	local function toggleSpectate()
+		local username = textBox.Text
+	
+		if username and username ~= "" then
+			if not isSpectating then
+				for _, p in pairs(game.Players:GetPlayers()) do
+					if p.Name:lower():sub(1, #username):lower() == username:lower() or p.DisplayName:lower():sub(1, #username):lower() == username:lower() then
+						targetPlayer = p
+						break
+					end
+				end
+	
+				if targetPlayer and targetPlayer.Character then
+					local targetCharacter = targetPlayer.Character
+					local humanoidRootPart = targetCharacter:WaitForChild("HumanoidRootPart", 5)
+					if humanoidRootPart then
+						camera.CameraType = Enum.CameraType.Scriptable
+						camera.CameraSubject = targetCharacter.Humanoid
+	
+						isSpectating = true
+	
+						spectateButton.BackgroundColor3 = spectateEnabledColor
+						spectateButton.TextColor3 = spectateEnabledColor
+						spectateButton.TextStrokeTransparency = 0.5
+						spectateButton.AutoButtonColor = false
+					else
+						warn("Target player does not have a HumanoidRootPart!")
+					end
+				else
+					warn("Player not found or character not loaded: " .. username)
+				end
+			else
+
+				camera.CameraType = Enum.CameraType.Custom
+				camera.CameraSubject = player.Character.Humanoid
+	
+				spectateButton.BackgroundColor3 = spectateDisabledColor
+				spectateButton.TextColor3 = spectateDisabledColor
+				spectateButton.TextStrokeTransparency = 0
+				spectateButton.AutoButtonColor = true
+	
+				isSpectating = false
+				targetPlayer = nil
+			end
+		end
+	end
+	
+	spectateButton.MouseButton1Click:Connect(function()
+		toggleSpectate()
+	end)
+	
+	game:GetService("RunService").Heartbeat:Connect(function()
+		if isSpectating and targetPlayer and targetPlayer.Character then
+			local humanoidRootPart = targetPlayer.Character:FindFirstChild("HumanoidRootPart")
+			if humanoidRootPart then
+
+				local cameraOffset = Vector3.new(0, 5, -10)
+				local cameraPosition = humanoidRootPart.Position - humanoidRootPart.CFrame.LookVector * 10 + Vector3.new(0, 5, 0)
+	
+				camera.CFrame = CFrame.new(cameraPosition, humanoidRootPart.Position + humanoidRootPart.CFrame.LookVector * 3)
+			end
+		end
+	end)
+end
+coroutine.wrap(PRLOC_fake_script)()
+local function ZDRGCXN_fake_script()
+	local script = Instance.new('LocalScript', Visuals)
+
+	local Players = game:GetService("Players")
+	local visualsButton = script.Parent
+	local visualsEnabled = false
+	local activeNametags = {}
+	
+	local function createNametag(player)
+		local nametag = Instance.new("BillboardGui")
+		nametag.Adornee = player.Character:WaitForChild("Head")
+		nametag.Size = UDim2.new(0, 200, 0, 60)
+		nametag.StudsOffset = Vector3.new(0, 1, 0)
+		nametag.Name = player.Name .. "Nametag"
+		nametag.AlwaysOnTop = true
+	
+		local textLabel = Instance.new("TextLabel")
+		textLabel.Parent = nametag
+		textLabel.Size = UDim2.new(1, 0, 0.5, 0)
+		textLabel.Position = UDim2.new(0, 0, 0, 0)
+		textLabel.Text = "[" .. player.DisplayName .. " (" .. player.Name .. ")]"
+		textLabel.TextScaled = true
+		textLabel.TextSize = 20
+		textLabel.TextColor3 = Color3.new(255, 0, 0)
+		textLabel.BackgroundTransparency = 1
+		textLabel.Font = Enum.Font.SourceSans
+		textLabel.TextStrokeTransparency = 0.5
+		textLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+	
+		nametag.Parent = workspace.CurrentCamera
+		return nametag
+	end
+	
+	local function toggleVisuals()
+		visualsEnabled = not visualsEnabled
+	
+		if visualsEnabled then
+			for _, player in pairs(Players:GetPlayers()) do
+				if player.Character then
+					local nametag = createNametag(player)
+					activeNametags[player.UserId] = nametag
+				end
+			end
+			visualsButton.TextColor3 = Color3.fromRGB(0, 255, 0)
+			visualsButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		else
+			for _, nametag in pairs(activeNametags) do
+				nametag:Destroy()
+			end
+			activeNametags = {}
+			visualsButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+			visualsButton.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
+		end
+	end
+	
+	local function onPlayerAdded(player)
+		player.CharacterAdded:Connect(function()
+			if visualsEnabled then
+				createNametag(player)
+			end
+		end)
+	
+		player.CharacterRemoving:Connect(function()
+			local nametag = workspace.CurrentCamera:FindFirstChild(player.Name .. "Nametag")
+	
+			if nametag then
+				nametag:Destroy()
+			end
+		end)
+	
+		if visualsEnabled then
+			createNametag(player)
+		end
+	end
+	
+	visualsButton.MouseButton1Click:Connect(toggleVisuals)
+	
+	Players.PlayerAdded:Connect(onPlayerAdded)
+	
+	for _, player in pairs(Players:GetPlayers()) do
+		onPlayerAdded(player)
+	end
+end
+coroutine.wrap(ZDRGCXN_fake_script)()
+local function DCJLIV_fake_script()
+	local script = Instance.new('LocalScript', GoTo)
+
+	local button = script.Parent
+	local textBox = button.Parent:WaitForChild("TextBox")
+	local spectateButton = button.Parent:WaitForChild("Spectate")
+	local goToButton = button.Parent:WaitForChild("GoTo")
+	
+	local isSpectating = false
+	local isTeleporting = false
+	local spectateEnabledColor = Color3.fromRGB(0, 255, 0)
+	local spectateDisabledColor = Color3.fromRGB(255, 0, 0)
+	local goToEnabledColor = Color3.fromRGB(0, 255, 0)
+	local goToDisabledColor = Color3.fromRGB(255, 0, 0)
+	
+	local player = game.Players.LocalPlayer
+	local camera = game.Workspace.CurrentCamera
+	
+	local targetPlayer
+	
+	local function findTargetPlayer(username)
+		for _, p in pairs(game.Players:GetPlayers()) do
+			if p.Name:lower():sub(1, #username):lower() == username:lower() or p.DisplayName:lower():sub(1, #username):lower() == username:lower() then
+				return p
+			end
+		end
+		return nil
+	end
+	
+	local function toggleSpectate()
+		local username = textBox.Text
+	
+		if username and username ~= "" then
+			targetPlayer = findTargetPlayer(username)
+	
+			if targetPlayer and targetPlayer.Character then
+				local targetCharacter = targetPlayer.Character
+				local humanoidRootPart = targetCharacter:WaitForChild("HumanoidRootPart", 5)
+				if humanoidRootPart then
+					camera.CameraType = Enum.CameraType.Scriptable
+					camera.CameraSubject = targetCharacter.Humanoid
+	
+					isSpectating = true
+	
+					spectateButton.BackgroundColor3 = spectateEnabledColor
+					spectateButton.TextColor3 = spectateEnabledColor
+					spectateButton.TextStrokeTransparency = 0.5
+					spectateButton.Text = "Spectate"
+					spectateButton.AutoButtonColor = false
+				end
+			end
+		end
+	end
+	
+	local function toggleGoTo()
+		local username = textBox.Text
+	
+		if username and username ~= "" then
+			targetPlayer = findTargetPlayer(username)
+	
+			if targetPlayer and targetPlayer.Character then
+				if not isTeleporting then
+					player.Character:SetPrimaryPartCFrame(targetPlayer.Character.HumanoidRootPart.CFrame)
+	
+					goToButton.BackgroundColor3 = goToEnabledColor
+					goToButton.TextColor3 = goToEnabledColor
+					goToButton.TextStrokeTransparency = 0.5
+					goToButton.Text = "Go To"
+					goToButton.AutoButtonColor = false
+	
+					isTeleporting = true
+				else
+					goToButton.BackgroundColor3 = goToDisabledColor
+					goToButton.TextColor3 = goToDisabledColor
+					goToButton.TextStrokeTransparency = 0
+					goToButton.Text = "Go To"
+					goToButton.AutoButtonColor = true
+	
+					isTeleporting = false
+				end
+			end
+		end
+	end
+	
+	spectateButton.MouseButton1Click:Connect(function()
+		toggleSpectate()
+	end)
+	
+	goToButton.MouseButton1Click:Connect(function()
+		toggleGoTo()
+	end)
+	
+	game:GetService("RunService").Heartbeat:Connect(function()
+		if isSpectating and targetPlayer and targetPlayer.Character then
+			local humanoidRootPart = targetPlayer.Character:FindFirstChild("HumanoidRootPart")
+			if humanoidRootPart then
+				local cameraOffset = Vector3.new(0, 5, -10)
+				local cameraPosition = humanoidRootPart.Position - humanoidRootPart.CFrame.LookVector * 10 + Vector3.new(0, 5, 0)
+	
+				camera.CFrame = CFrame.new(cameraPosition, humanoidRootPart.Position + humanoidRootPart.CFrame.LookVector * 3)
+			end
+		end
+	end)
+end
+coroutine.wrap(DCJLIV_fake_script)()
+local function BANTLT_fake_script()
+	local script = Instance.new('LocalScript', Vanish)
+
+	local button = script.Parent
+	local isVanished = false
+	local originalPosition = nil
+	local vanishPosition = Vector3.new(0, 33617.301, 0)
+	
+	local player = game.Players.LocalPlayer
+	
+	button.Text = "Vanish"
+	button.TextColor3 = Color3.new(1, 0, 0)
+	
+	local function toggleVanish()
+		isVanished = not isVanished
+	
+		if isVanished then
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				originalPosition = player.Character.HumanoidRootPart.Position
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(vanishPosition)
+			end
+			button.Text = "Vanish"
+			button.TextColor3 = Color3.new(0, 1, 0)
+		else
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and originalPosition then
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(originalPosition)
+			end
+			button.Text = "Vanish"
+			button.TextColor3 = Color3.new(1, 0, 0)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleVanish)
+end
+coroutine.wrap(BANTLT_fake_script)()
+local function QQTFCX_fake_script()
+	local script = Instance.new('LocalScript', UI)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(QQTFCX_fake_script)()
+local function XQVDB_fake_script()
+	local script = Instance.new('LocalScript', UI)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	function onKeyPress(inputObject, gameProcessedEvent)
+		if not gameProcessedEvent then
+			if inputObject.KeyCode == Enum.KeyCode.P then 
+				if script.Parent.Parent.UI.Visible == false then
+					script.Parent.Parent.UI.Visible = true
+				else
+					script.Parent.Parent.UI.Visible = false
+				end
+			end
+		end
+	end
+	
+	UserInputService.InputBegan:connect(onKeyPress)
+end
+coroutine.wrap(XQVDB_fake_script)()
+local function OIFT_fake_script()
+	local script = Instance.new('LocalScript', UI)
+
+	local player = game.Players.LocalPlayer
+	local gui = player.PlayerGui:WaitForChild("Falling Void")
+	local uiFrame = gui:WaitForChild("UI")
+	
+	local function centerUI()
+		uiFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+		uiFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+	end
+	
+	centerUI()
+	
+	game:GetService("GuiService").Changed:Connect(function()
+		centerUI()
+	end)
+end
+coroutine.wrap(OIFT_fake_script)()
