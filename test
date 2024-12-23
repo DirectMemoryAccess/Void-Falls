@@ -1,0 +1,552 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local FallingVoid = Instance.new("ScreenGui")
+local UI = Instance.new("Frame")
+local UIStroke = Instance.new("UIStroke")
+local Holder = Instance.new("Frame")
+local UIStroke_2 = Instance.new("UIStroke")
+local Holder2 = Instance.new("Frame")
+local UIStroke_3 = Instance.new("UIStroke")
+local Spectate = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local Visuals = Instance.new("TextButton")
+local Line = Instance.new("Frame")
+local GoTo = Instance.new("TextButton")
+local Vanish = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+
+-- Properties:
+
+FallingVoid.Name = "Falling Void"
+FallingVoid.Parent = game.CoreGui
+
+UI.Name = "UI"
+UI.Parent = FallingVoid
+UI.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+UI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UI.BorderSizePixel = 0
+UI.Position = UDim2.new(0.458781332, 0, 0.524949729, 0)
+UI.Size = UDim2.new(0, 132, 0, 231)
+UI.Active = true
+UI.Draggable = true
+
+UIStroke.Color = Color3.fromRGB(32, 91, 150)
+UIStroke.Thickness = 1.5
+UIStroke.Parent = UI
+
+Holder.Name = "Holder"
+Holder.Parent = UI
+Holder.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Holder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Holder.BorderSizePixel = 0
+Holder.Position = UDim2.new(0.073124744, 0, 0.11387337, 0)
+Holder.Size = UDim2.new(0, 115, 0, 195)
+
+UIStroke_2.Color = Color3.fromRGB(40, 40, 40)
+UIStroke_2.Parent = Holder
+
+Holder2.Name = "Holder2"
+Holder2.Parent = Holder
+Holder2.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+Holder2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Holder2.BorderSizePixel = 0
+Holder2.Position = UDim2.new(0.0696108639, 0, 0.031022761, 0)
+Holder2.Size = UDim2.new(0, 98, 0, 182)
+
+UIStroke_3.Color = Color3.fromRGB(40, 40, 40)
+UIStroke_3.Parent = Holder2
+
+Spectate.Name = "Spectate"
+Spectate.Parent = Holder2
+Spectate.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Spectate.BackgroundTransparency = 1.000
+Spectate.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Spectate.BorderSizePixel = 0
+Spectate.Position = UDim2.new(0.10204082, 0, 0, 0)
+Spectate.Size = UDim2.new(0, 75, 0, 18)
+Spectate.Font = Enum.Font.FredokaOne
+Spectate.Text = "Spectate"
+Spectate.TextColor3 = Color3.fromRGB(255, 0, 0)
+Spectate.TextSize = 14.000
+
+TextBox.Parent = Holder2
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.168707401, 0, 0.148351654, 0)
+TextBox.Size = UDim2.new(0, 64, 0, 11)
+TextBox.Font = Enum.Font.FredokaOne
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.PlaceholderText = "Player Here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+Visuals.Name = "Visuals"
+Visuals.Parent = Holder2
+Visuals.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Visuals.BackgroundTransparency = 1.000
+Visuals.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Visuals.BorderSizePixel = 0
+Visuals.Position = UDim2.new(0.10204082, 0, 0.285714298, 0)
+Visuals.Size = UDim2.new(0, 75, 0, 18)
+Visuals.Font = Enum.Font.FredokaOne
+Visuals.Text = "Visuals"
+Visuals.TextColor3 = Color3.fromRGB(255, 0, 0)
+Visuals.TextSize = 14.000
+
+Line.Name = "Line"
+Line.Parent = Holder2
+Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Line.BorderSizePixel = 0
+Line.Position = UDim2.new(0.148346573, 0, 0.24530901, 0)
+Line.Size = UDim2.new(0, 64, 0, 1)
+
+GoTo.Name = "GoTo"
+GoTo.Parent = Holder2
+GoTo.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+GoTo.BackgroundTransparency = 1.000
+GoTo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GoTo.BorderSizePixel = 0
+GoTo.Position = UDim2.new(0.10204082, 0, 0.384615391, 0)
+GoTo.Size = UDim2.new(0, 75, 0, 18)
+GoTo.Font = Enum.Font.FredokaOne
+GoTo.Text = "Go To"
+GoTo.TextColor3 = Color3.fromRGB(255, 0, 0)
+GoTo.TextSize = 14.000
+
+Vanish.Name = "Vanish"
+Vanish.Parent = Holder2
+Vanish.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Vanish.BackgroundTransparency = 1.000
+Vanish.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Vanish.BorderSizePixel = 0
+Vanish.Position = UDim2.new(0.10204082, 0, 0.483516484, 0)
+Vanish.Size = UDim2.new(0, 75, 0, 18)
+Vanish.Font = Enum.Font.FredokaOne
+Vanish.Text = "Vanish"
+Vanish.TextColor3 = Color3.fromRGB(255, 0, 0)
+Vanish.TextSize = 14.000
+
+TextLabel.Parent = UI
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0545561835, 0, 0.0389618315, 0)
+TextLabel.Size = UDim2.new(0, 114, 0, 11)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "Falling Void"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = UI
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0545561835, 0, 0.0389618315, 0)
+TextLabel_2.Size = UDim2.new(0, 114, 0, 11)
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = "Falling Void"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+-- Scripts:
+
+local function KFWMQW_fake_script() -- Spectate.LocalScript 
+	local script = Instance.new('LocalScript', Spectate)
+
+	local textBox = script.Parent.Parent:WaitForChild("TextBox")
+	local spectateButton = script.Parent.Parent:WaitForChild("Spectate")
+	
+	local isSpectating = false
+	local spectateEnabledColor = Color3.fromRGB(0, 255, 0)
+	local spectateDisabledColor = Color3.fromRGB(255, 0, 0)
+	
+	local player = game.Players.LocalPlayer
+	local camera = game.Workspace.CurrentCamera
+	
+	local targetPlayer
+	
+	local function toggleSpectate()
+		local username = textBox.Text
+	
+		if username and username ~= "" then
+			if not isSpectating then
+				for _, p in pairs(game.Players:GetPlayers()) do
+					if p.Name:lower():sub(1, #username):lower() == username:lower() or p.DisplayName:lower():sub(1, #username):lower() == username:lower() then
+						targetPlayer = p
+						break
+					end
+				end
+	
+				if targetPlayer and targetPlayer.Character then
+					local targetCharacter = targetPlayer.Character
+					local humanoidRootPart = targetCharacter:WaitForChild("HumanoidRootPart", 5)
+					if humanoidRootPart then
+						camera.CameraType = Enum.CameraType.Scriptable
+						camera.CameraSubject = targetCharacter.Humanoid
+	
+						isSpectating = true
+	
+						spectateButton.BackgroundColor3 = spectateEnabledColor
+						spectateButton.TextColor3 = spectateEnabledColor
+						spectateButton.TextStrokeTransparency = 0.5
+						spectateButton.AutoButtonColor = false
+					else
+						warn("Target player does not have a HumanoidRootPart!")
+					end
+				else
+					warn("Player not found or character not loaded: " .. username)
+				end
+			else
+				-- Return to normal camera behavior
+				camera.CameraType = Enum.CameraType.Custom
+				camera.CameraSubject = player.Character.Humanoid
+	
+				spectateButton.BackgroundColor3 = spectateDisabledColor
+				spectateButton.TextColor3 = spectateDisabledColor
+				spectateButton.TextStrokeTransparency = 0
+				spectateButton.AutoButtonColor = true
+	
+				isSpectating = false
+				targetPlayer = nil
+			end
+		end
+	end
+	
+	spectateButton.MouseButton1Click:Connect(function()
+		toggleSpectate()
+	end)
+	
+	game:GetService("RunService").Heartbeat:Connect(function()
+		if isSpectating and targetPlayer and targetPlayer.Character then
+			local humanoidRootPart = targetPlayer.Character:FindFirstChild("HumanoidRootPart")
+			if humanoidRootPart then
+				-- Adjust the camera position to stay slightly behind and above the player
+				local cameraOffset = Vector3.new(0, 5, -10)  -- Camera is slightly above and behind
+				local cameraPosition = humanoidRootPart.Position - humanoidRootPart.CFrame.LookVector * 10 + Vector3.new(0, 5, 0)
+	
+				-- Adjust the camera's CFrame to have a better view of the front
+				camera.CFrame = CFrame.new(cameraPosition, humanoidRootPart.Position + humanoidRootPart.CFrame.LookVector * 3)
+			end
+		end
+	end)
+end
+coroutine.wrap(KFWMQW_fake_script)()
+local function XYOW_fake_script() -- Visuals.LocalScript 
+	local script = Instance.new('LocalScript', Visuals)
+
+	local Players = game:GetService("Players")
+	local visualsButton = script.Parent
+	local visualsEnabled = false
+	local activeNametags = {}
+	
+	local function createNametag(player)
+		local nametag = Instance.new("BillboardGui")
+		nametag.Adornee = player.Character:WaitForChild("Head")
+		nametag.Size = UDim2.new(0, 200, 0, 60)
+		nametag.StudsOffset = Vector3.new(0, 1, 0)  -- Keep it close to the head, slightly below
+		nametag.Name = player.Name .. "Nametag"
+		nametag.AlwaysOnTop = true  -- Make the nametag visible through walls
+	
+		local textLabel = Instance.new("TextLabel")
+		textLabel.Parent = nametag
+		textLabel.Size = UDim2.new(1, 0, 0.5, 0)
+		textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Position the text at the bottom of the nametag
+		textLabel.Text = "[" .. player.DisplayName .. " (" .. player.Name .. ")]"
+		textLabel.TextScaled = true
+		textLabel.TextSize = 20
+		textLabel.TextColor3 = Color3.new(255, 0, 0)
+		textLabel.BackgroundTransparency = 1
+		textLabel.Font = Enum.Font.SourceSans
+		textLabel.TextStrokeTransparency = 0.5
+		textLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+	
+		nametag.Parent = workspace.CurrentCamera
+		return nametag
+	end
+	
+	local function toggleVisuals()
+		visualsEnabled = not visualsEnabled
+	
+		if visualsEnabled then
+			for _, player in pairs(Players:GetPlayers()) do
+				if player.Character then
+					local nametag = createNametag(player)
+					activeNametags[player.UserId] = nametag
+				end
+			end
+			visualsButton.TextColor3 = Color3.fromRGB(0, 255, 0)
+			visualsButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		else
+			for _, nametag in pairs(activeNametags) do
+				nametag:Destroy()
+			end
+			activeNametags = {}
+			visualsButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+			visualsButton.BackgroundColor3 = Color3.fromRGB(97, 97, 97)
+		end
+	end
+	
+	local function onPlayerAdded(player)
+		player.CharacterAdded:Connect(function()
+			if visualsEnabled then
+				createNametag(player)
+			end
+		end)
+	
+		player.CharacterRemoving:Connect(function()
+			local nametag = workspace.CurrentCamera:FindFirstChild(player.Name .. "Nametag")
+	
+			if nametag then
+				nametag:Destroy()
+			end
+		end)
+	
+		if visualsEnabled then
+			createNametag(player)
+		end
+	end
+	
+	visualsButton.MouseButton1Click:Connect(toggleVisuals)
+	
+	Players.PlayerAdded:Connect(onPlayerAdded)
+	
+	for _, player in pairs(Players:GetPlayers()) do
+		onPlayerAdded(player)
+	end
+end
+coroutine.wrap(XYOW_fake_script)()
+local function MCPT_fake_script() -- GoTo.LocalScript 
+	local script = Instance.new('LocalScript', GoTo)
+
+	local button = script.Parent
+	local textBox = button.Parent:WaitForChild("TextBox")
+	local spectateButton = button.Parent:WaitForChild("Spectate")
+	local goToButton = button.Parent:WaitForChild("GoTo")
+	
+	local isSpectating = false
+	local isTeleporting = false
+	local spectateEnabledColor = Color3.fromRGB(0, 255, 0)
+	local spectateDisabledColor = Color3.fromRGB(255, 0, 0)
+	local goToEnabledColor = Color3.fromRGB(0, 255, 0)
+	local goToDisabledColor = Color3.fromRGB(255, 0, 0)
+	
+	local player = game.Players.LocalPlayer
+	local camera = game.Workspace.CurrentCamera
+	
+	local targetPlayer
+	
+	local function findTargetPlayer(username)
+		for _, p in pairs(game.Players:GetPlayers()) do
+			if p.Name:lower():sub(1, #username):lower() == username:lower() or p.DisplayName:lower():sub(1, #username):lower() == username:lower() then
+				return p
+			end
+		end
+		return nil
+	end
+	
+	local function toggleSpectate()
+		local username = textBox.Text
+	
+		if username and username ~= "" then
+			targetPlayer = findTargetPlayer(username)
+	
+			if targetPlayer and targetPlayer.Character then
+				local targetCharacter = targetPlayer.Character
+				local humanoidRootPart = targetCharacter:WaitForChild("HumanoidRootPart", 5)
+				if humanoidRootPart then
+					camera.CameraType = Enum.CameraType.Scriptable
+					camera.CameraSubject = targetCharacter.Humanoid
+	
+					isSpectating = true
+	
+					spectateButton.BackgroundColor3 = spectateEnabledColor
+					spectateButton.TextColor3 = spectateEnabledColor
+					spectateButton.TextStrokeTransparency = 0.5
+					spectateButton.Text = "Spectate"
+					spectateButton.AutoButtonColor = false
+				end
+			end
+		end
+	end
+	
+	local function toggleGoTo()
+		local username = textBox.Text
+	
+		if username and username ~= "" then
+			targetPlayer = findTargetPlayer(username)
+	
+			if targetPlayer and targetPlayer.Character then
+				if not isTeleporting then
+					player.Character:SetPrimaryPartCFrame(targetPlayer.Character.HumanoidRootPart.CFrame)
+	
+					goToButton.BackgroundColor3 = goToEnabledColor
+					goToButton.TextColor3 = goToEnabledColor
+					goToButton.TextStrokeTransparency = 0.5
+					goToButton.Text = "Go To"
+					goToButton.AutoButtonColor = false
+	
+					isTeleporting = true
+				else
+					goToButton.BackgroundColor3 = goToDisabledColor
+					goToButton.TextColor3 = goToDisabledColor
+					goToButton.TextStrokeTransparency = 0
+					goToButton.Text = "Go To"
+					goToButton.AutoButtonColor = true
+	
+					isTeleporting = false
+				end
+			end
+		end
+	end
+	
+	spectateButton.MouseButton1Click:Connect(function()
+		toggleSpectate()
+	end)
+	
+	goToButton.MouseButton1Click:Connect(function()
+		toggleGoTo()
+	end)
+	
+	game:GetService("RunService").Heartbeat:Connect(function()
+		if isSpectating and targetPlayer and targetPlayer.Character then
+			local humanoidRootPart = targetPlayer.Character:FindFirstChild("HumanoidRootPart")
+			if humanoidRootPart then
+				local cameraOffset = Vector3.new(0, 5, -10)
+				local cameraPosition = humanoidRootPart.Position - humanoidRootPart.CFrame.LookVector * 10 + Vector3.new(0, 5, 0)
+	
+				camera.CFrame = CFrame.new(cameraPosition, humanoidRootPart.Position + humanoidRootPart.CFrame.LookVector * 3)
+			end
+		end
+	end)
+end
+coroutine.wrap(MCPT_fake_script)()
+local function OJCFWI_fake_script() -- Vanish.LocalScript 
+	local script = Instance.new('LocalScript', Vanish)
+
+	local button = script.Parent
+	local isVanished = false
+	local originalPosition = nil
+	local vanishPosition = Vector3.new(0, 33617.301, 0)
+	
+	local player = game.Players.LocalPlayer
+	
+	button.Text = "Vanish"
+	button.TextColor3 = Color3.new(1, 0, 0)
+	
+	local function toggleVanish()
+		isVanished = not isVanished
+	
+		if isVanished then
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+				originalPosition = player.Character.HumanoidRootPart.Position
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(vanishPosition)
+			end
+			button.Text = "Vanish"
+			button.TextColor3 = Color3.new(0, 1, 0)
+		else
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and originalPosition then
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(originalPosition)
+			end
+			button.Text = "Vanish"
+			button.TextColor3 = Color3.new(1, 0, 0)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleVanish)
+end
+coroutine.wrap(OJCFWI_fake_script)()
+local function AZDK_fake_script() -- UI.DragScript 
+	local script = Instance.new('LocalScript', UI)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(AZDK_fake_script)()
+local function ZIAKK_fake_script() -- UI.Keybind 
+	local script = Instance.new('LocalScript', UI)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	function onKeyPress(inputObject, gameProcessedEvent)
+		if not gameProcessedEvent then
+			if inputObject.KeyCode == Enum.KeyCode.P then 
+				if script.Parent.Parent.UI.Visible == false then
+					script.Parent.Parent.UI.Visible = true
+				else
+					script.Parent.Parent.UI.Visible = false
+				end
+			end
+		end
+	end
+	
+	UserInputService.InputBegan:connect(onKeyPress)
+end
+coroutine.wrap(ZIAKK_fake_script)()
+local function ASSSAK_fake_script() -- UI.ScreenPosition 
+	local script = Instance.new('LocalScript', UI)
+
+	local player = game.Players.LocalPlayer
+	local gui = player.PlayerGui:WaitForChild("Falling Void")
+	local uiFrame = gui:WaitForChild("UI")
+	
+	local function centerUI()
+		uiFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+		uiFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+	end
+	
+	centerUI()
+	
+	game:GetService("GuiService").Changed:Connect(function()
+		centerUI()
+	end)
+end
+coroutine.wrap(ASSSAK_fake_script)()
